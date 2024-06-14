@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<!-- ICT22 || REDACTED || Lesson 3 - JavaScript || Integrative Output-->
+
+<!-- Developed under 12 hours, sorry on the cheap look and design -->
+
+<html>
+	
+	<head>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>
+		
+			REDACTED: JS Integrative Output
+			
+		</title>
+		
+	</head>
+	
+	<body style = "font-family:Arial;background-color:gray">
+		
+		<hr>
+		<hr>
+		
+		<h1>
+			
+			1. Viewport is installed on the webpage now.
+			
+		</h1>
+		
+		<hr>
+		<hr>
+		
+		<h1>
+			
+			2. Changing Text Sizes:
+		
+		</h1>
+		
+		<p id = "Text" style = "font-size:35px">
+			
+			Hi, I'm a sentence you will never see again after you click the buttons below me or refresh the page. :D
+			
+		</p>
+
+		<button onclick = "TextLarge()">
+			
+			Click me to make text bigger
+			
+		</button>
+		
+		<script>
+			
+			function TextLarge()
+			{
+				
+				document.getElementById("Text").style.fontSize = "50px";
+				document.getElementById("Text").innerHTML = "Sup, friendly neighbour, I am a 50px text! :D";
+				
+			}
+			
+		</script>
+		
+		<button onclick = "TextSmall()">
+			
+			Click me to make text smaller
+			
+		</button>
+		
+		<script>
+			
+			function TextSmall()
+			{
+				
+				document.getElementById("Text").style.fontSize = "20px";
+				document.getElementById("Text").innerHTML = "Hello there, big step bro, I am a 20px text! :D";
+				
+			}
+			
+		</script>
+		
+		<hr>
+		<hr>
+		
+		<!-- ALL THE TIME AND BUDGET WENT ON THIS PART -->
+		
+		<h1> 
+			
+			3. Responsive images:
+			
+		</h1>
+		
+		<br>
+		
+		<h2>
+			
+			Major steps on the checklist on how the N.A.S.A.'s Apollo Program went to the moon and back, from 25 minutes before launch and to splash down:
+			
+		</h2>
+		
+		Pls wait for pictures to load.
+		
+		<br>
+		
+		<!-- Base:
+		<button onclick = "Xpic()">
+			
+			<span style = "font-size:20px;">
+				
+				X
+				
+			</span>
+			
+			
+			
+		</button>
+		-->
+		
+		<button onclick = "firstpic()"> <!-- 1st Picture -->
+			
+			<span style = "font-size:20px;">
+				
+				1)
+				
+			</span>
+			
+			30 to 25 minute mark
+			
+		</button>
+		
+		<button onclick = "secondpic()"> <!-- 2nd Picture -->
+			
+			<span style = "font-size:20px;">
+				
+				2)
+				
+			</span>
+			
+			25 minutes to 40 seconds marks
+			
+		</button>
+		
+		<button onclick = "thirdpic()"> <!-- 3rd Picture -->
+			
+			<span style = "font-size:20px;">
+				
+				3)
+				
+			</span>
+			
+			Lift off phase
+			
+		</button>
+		
+		<button onclick = "fourthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				4)
+				
+			</span>
+			
+			Ascent Phase
+			
+		</button>
+		
+		<button onclick = "fifthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				5)
+				
+			</span>
+			
+			Orbital Burn
+			
+		</button>
+		
+		<button onclick = "sixthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				6)
+				
+			</span>
+			
+			Trans Lunar Injection
+			
+		</button>
+		
+		<button onclick = "seventhpic()">
+			
+			<span style = "font-size:20px;">
+				
+				7)
+				
+			</span>
+			
+			Docking and the trans lunar "waiting"
+			
+		</button>
+		
+		<button onclick = "eighthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				8)
+				
+			</span>
+			
+			Lunar Injection
+			
+		</button>
+		
+		<button onclick = "ninethpic()">
+			
+			<span style = "font-size:20px;">
+				
+				9)
+				
+			</span>
+			
+			Lunar Module Descent
+			
+		</button>
+		
+		<button onclick = "tenthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				10)
+				
+			</span>
+			
+			Lunar Experiment
+			
+		</button>
+		
+		<button onclick = "eleventhpic()">
+			
+			<span style = "font-size:20px;">
+				
+				11)
+				
+			</span>
+			
+			Lunar ascent
+			
+		</button>
+		
+		<button onclick = "twelvethpic()">
+			
+			<span style = "font-size:20px;">
+				
+				12)
+				
+			</span>
+			
+			Lunar Ascent Docking
+			
+		</button>
+		
+		<button onclick = "thirteenthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				13)
+				
+			</span>
+			
+			Trans Earth Injection
+			
+		</button>
+		
+		<button onclick = "fourteenthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				14)
+				
+			</span>
+			
+			Reentry
+			
+		</button>
+		
+		<button onclick = "fifteenthpic()">
+			
+			<span style = "font-size:20px;">
+				
+				15)
+				
+			</span>
+			
+			Final Phase / Recovery
+			
+		</button>
+		
+		<button onclick = "Summary()">
+			
+			<span style = "font-size:20px;">
+				
+				Summary
+				
+			</span>
+			
+		</button>
+		
+		<!-- Base:
+		<button onclick = "Xpic()">
+			
+			<span style = "font-size:20px;">
+				
+				X
+				
+			</span>
+			
+			
+			
+		</button>
+		-->
+		
+		<br>
+		
+		<p id = "desc" style = "font-size:25px;"></p>
+		
+		<br>
+		
+		<image id = "picture" style = "width:100%;height:100%;" src = "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Apollo_program.svg/1200px-Apollo_program.svg.png">
+		
+		<script>
+			
+			/* Base:
+			function Xpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "";
+				document.getElementById("picture").src = "";
+				
+			}
+			*/
+			
+			function firstpic() // 1st Picture
+			{
+				
+				document.getElementById("desc").innerHTML = "30 minutes before the scheduled lift-off, the astronauts will now walk to the rocket's capsule. The Apollo 11 astronauts - the first to walk on the moon - are thought to be their last walk on the Earth since the ascent module of the lunar lander's rocket capability is unknown on whether if it could lift off the surface of the Moon or not due to lack of time to research and funding.";
+				document.getElementById("picture").src = "https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/apollo_11_crew_walkout_jul_16_1969_s69-39956.jpg?itok=rLUVhbQ_";
+				
+			}
+			
+			function secondpic() // 2nd Picture
+			{
+				
+				document.getElementById("desc").innerHTML = "Starting from 24 minutes until 40 seconds before lift-off, the astronauts now have to follow a procedure on the checklist (boost preparations) to prepare the whole Saturn V for lift-off and ascent.";
+				document.getElementById("picture").src = "https://www.denverpost.com/wp-content/uploads/2017/01/5ea46bb4580949b791b74b563eb03678.jpg";
+				
+			}
+			
+			function thirdpic() //3rd Picture
+			{
+				
+				document.getElementById("desc").innerHTML = "At 8 seconds, the ignition sequence for the five F-1 engines start, thrusting at 34,251Kn (Kilonewtons) or 7,700,000lb (pounds), then at T+ 1 second, the whole of Saturn V is now fully detached from Earth.";
+				document.getElementById("picture").src = "https://api.time.com/wp-content/uploads/2014/07/140709-apollo-11-liftoff-composite1.jpg";
+				
+			}
+			
+			function fourthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "Starting from lift-off up until almost half an hour (yes, half an hour of constant stress for the astronauts and vibration of the rocket), the rocket will now go through different phases and stages, the astronauts must keep all their senses on the status of the rocket or risk problems and maybe even death.";
+				document.getElementById("picture").src = "https://i0.wp.com/www.drewexmachina.com/wp-content/uploads/2018/04/S68-29737_feature.jpg?fit=890%2C500&ssl=1";
+				
+			}	
+			
+			function fifthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After several minutes of ascent phase, the Saturn V's S-IC and S-II boosters are now detached from the rest of the space craft and will come back to Earth somewhere at the North Atlantic. The S-IVB booster will get the rest to orbit then later to the Moon's sphere of influence.";
+				document.getElementById("picture").src = "https://lh3.googleusercontent.com/proxy/M0GkwC8odEx7DplLN3qKO2i6APjJ6f9PYus2beTjtHwy6RI7QVJHhsqiPg_hUZ35C1POheNa78Xw4BsoKPF5Dvcbw1NWcP8E_LhpnZMiSokgWK6n4y2eqGV9-lsaKKmNylqJypPpjiyPHJ5Se81exoQ6_kDX47w-MURdr8JwlUQRJh3HbpgU8w0e65fOgvxP6Rt1RlvKXRNjpfkYpg";
+				
+			}
+			
+			function sixthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "As mentioned before, the S-IVB on the image below (starting from the rocket engine until before it starts to get smaller) has now achieved orbit a few hours ago and now re-ignited again to push the rest of the rocket to trans lunar injection and to be captured by the SOI (sphere of influence) of the Moon where the Moon's gravity will now pull them.";
+				document.getElementById("picture").src = "https://images.fineartamerica.com/images-medium-large-5/trans-lunar-injection-douglas-castleman.jpg";
+				
+			}
+			
+			function seventhpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After trans lunar injection, The CSM has been released from S-IVB and will now attempt to dock to the Lunar Module, after it's docked, the S-IVB says its good bye and now the CSM and Lunar Lander are on their way to the Moon.";
+				document.getElementById("picture").src = "https://media.sciencephoto.com/c0/29/90/85/c0299085-800px-wm.jpg";
+				
+			}
+			
+			function eighthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After reaching the Moon, the Service Module's vacuum bell engine will ignite for the first time and put the CSM and Lunar Lander in orbit to prepare for descent on Moon for landing.";
+				document.getElementById("picture").src = "https://i.pinimg.com/originals/de/de/cc/dedeccdbb72807e02dd6a2364f8cb4f2.jpg";
+				
+			}
+			
+			function ninethpic()
+			{
+				
+				document.getElementById("desc").innerHTML = 'The image below, knows as "Everyone in the world except for Michael Collins" is when Buzz Aldrin and Neil Armstrong is abord the Lunar Landar on the picture descends down to the Moon.';
+				document.getElementById("picture").src = "https://i.redd.it/frjwnqpo3ku41.jpg";
+				
+			}
+			
+			function tenthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "The Lunar Module now lands and a historic moment has been made, now to research and do science and gather information & samples.";
+				document.getElementById("picture").src = "https://cdn.theatlantic.com/media/img/photo/2019/07/apollo-11-moon-landing-photos-50-ye/a01_40-5903-1/original.jpg";
+				
+			}
+			
+			function eleventhpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After spending several hours on the Lunar surface, the astronauts will now go backk to the orbiting CSM before running out of supplies.";
+				document.getElementById("picture").src = "http://33.media.tumblr.com/e0750048b32f305bfb878960d012f3c5/tumblr_ngiqfo3aeH1qigaa4o1_r1_400.gif";
+				
+			}
+			
+			function twelvethpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After ascent, the Lunar Ascent Module will now dock to the CSM in Lunar orbit.";
+				document.getElementById("picture").src = "https://lh3.googleusercontent.com/proxy/OyiuOcsKP4Ytv7KsjuwMpcXHxCMQ_LSTeOzrft_ItCgK3GevN1ULsQYqmhPFFTIDA-M1D8YMvVS5Fs6Hih7wynvgWSQ8miPc";
+				
+			}
+			
+			function thirteenthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After docking, the astronauts will now all transfer to the CSM and eject the Lunar Module on the Lunar orbit and go back to Earth.";
+				document.getElementById("picture").src = "https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/apollo-8-transearth-injection-philp-cruden.jpg";
+				
+			}
+			
+			function fourteenthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After 2 and a half days going back to Earth, the Capsule will now separate from the Service Module, the word CSM is now gone, the capsule will now prepare for reentry to the Earth's atmosphere. Everyone in the Earth and the crew now holds their breath to tell if the heat shield will hold.";
+				document.getElementById("picture").src = "http://www.gerryairways.com/wp-content/uploads/2016/01/ApolloReentry.jpg";
+				
+			}
+			
+			function fifteenthpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "After 3 to 4 minutes of blackout, the crew SHOULD radio in to let everyone know they're alive, if not, the capsule disintegrated on the atmosphere, destroying most of the capsule and killing the 3 crew on board, if the heat shield held up, it's going to be splashdown in several minutes and recovery.";
+				document.getElementById("picture").src = "https://i.ytimg.com/vi/wX8-Vmys-Fk/hqdefault.jpg";
+				
+			}
+			
+			function Summary()
+			{
+				
+				document.getElementById("desc").innerHTML = "Summary. (Big sized picture)";
+				document.getElementById("picture").src = "https://airandspace.si.edu/sites/default/files/images/5317h.jpg";
+				
+			}
+			
+			/* Base:
+			function Xpic()
+			{
+				
+				document.getElementById("desc").innerHTML = "";
+				document.getElementById("picture").src = "";
+				
+			}
+			*/
+			
+		</script>
+		
+	</body>
+	
+<!-- ICT22 || REDACTED || Lesson 3 - JavaScript || Integrative Output-->
+
+<address style = "bottom:1px;">
+
+ICT22 || REDACTED || Lesson 3 - JavaScript || Integrative Output
+
+</address>
+
+</html> 
